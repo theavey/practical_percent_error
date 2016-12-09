@@ -27,6 +27,7 @@ def calc_and_display(correct_value, section):
     try:
         their_value = float(input('Their value: '))
     except ValueError:
+        # Go back to the menu if anything other than a number is entered
         return None
     percent_error = abs(their_value - correct_value) / correct_value
     grade = 26 - round(percent_error * 100.0 / 2)
@@ -41,6 +42,7 @@ def calc_and_display(correct_value, section):
     print('Their value in 10 mL: {:.2f} mg.'.format(their_10mL))
     print('True value in 10 mL: {:.2f} mg.\n'.format(true_10mL))
     if section == 1:
+        # This section all used the same unknown, so just loop through again
         calc_and_display(correct_value, 1)
     return None
 
