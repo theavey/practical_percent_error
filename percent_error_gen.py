@@ -36,14 +36,13 @@ def calc_and_display(correct_value, section):
     true_10mL = correct_value * 0.010 * 63546.0
     their_10mL = their_value * 0.010 * 63546.0
     print('\n\nTrue value: {:.4f}'.format(correct_value))
-    print('\npercent error: {:.2%}'.format(percent_error))
+    print('\npercent error: {:.0%}'.format(percent_error))
     print('\ngrade: {}\n'.format(grade))
     print('Their value in 10 mL: {:.2f} mg.'.format(their_10mL))
     print('True value in 10 mL: {:.2f} mg.\n'.format(true_10mL))
     if section == 1:
         calc_and_display(correct_value, 1)
     return None
-
 
 
 def control():
